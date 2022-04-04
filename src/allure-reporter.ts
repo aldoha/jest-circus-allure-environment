@@ -317,7 +317,8 @@ export default class AllureReporter {
 
 		// Add newline before the first expect()
 		code = code.split(/(expect[\S\s.]*)/g).join('\n');
-		code = prettier.format(code, {parser: 'typescript', plugins: [parser]});
+		// Bug https://github.com/ryparker/jest-circus-allure-environment/issues/185
+		// code = prettier.format(code, {parser: 'typescript', plugins: [parser]});
 
 		return {code, comments, pragmas};
 	}

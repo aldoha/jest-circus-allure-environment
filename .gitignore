@@ -17,6 +17,7 @@ pids
 
 # Allure
 allure-results
+allure-report
 
 # examples
 examples
